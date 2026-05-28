@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>スキージーズ株式会社｜空間ディスプレイ・サイン製作</title>
+  <meta name="description" content="スキージーズ株式会社は、東京・墨田区を拠点に、展示会ブース、イベント、店舗内装などの空間ディスプレイと、サイン製作を企画・製作・施工まで一貫して行っています。" />
+
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --paper: #ffffff;
+      --ink: #1f1f1f;
+      --muted: #666666;
+      --line: #ded8ce;
+      --accent: #f3b13f;
+      --accent-dark: #d58b12;
+      --dark: #171717;
+      --radius: 22px;
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", "YuGothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.8;
+      letter-spacing: 0.03em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(247, 244, 239, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(222, 216, 206, 0.8);
+    }
+
+    .nav {
+      height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: 0.08em;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.16em;
+      margin-top: -4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-dark);
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: rgba(243, 177, 63, 0.22);
+      right: -120px;
+      top: 40px;
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 38px;
+      height: 2px;
+      background: var(--accent-dark);
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 1.08;
+      letter-spacing: 0.03em;
+      margin: 0 0 24px;
+    }
+
+    .hero-copy {
+      font-size: clamp(17px, 2vw, 22px);
+      font-weight: 700;
+      margin: 0 0 18px;
+    }
+
+    .hero-text {
+      color: var(--muted);
+      margin-bottom: 34px;
+      max-width: 580px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: var(--dark);
+      color: #fff;
+    }
+
+    .button.secondary {
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--ink);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      background: var(--paper);
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border: 1px solid rgba(222, 216, 206, 0.7);
+    }
+
+    .hero-image {
+      aspect-ratio: 4 / 3;
+      background: linear-gradient(135deg, #222, #555);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+      font-weight: 800;
+    }
+
+    .hero-image small {
+      display: block;
+      margin-top: 8px;
+      color: rgba(255, 255, 255, 0.75);
+      font-weight: 600;
+    }
+
+    .hero-card-body {
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .mini-stat {
+      padding: 18px;
+      border-radius: 18px;
+      background: #f8f5ef;
+    }
+
+    .mini-stat b {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .mini-stat span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 82px 0;
+    }
+
+    .section-head {
+      margin-bottom: 34px;
+      max-width: 780px;
+    }
+
+    .section-label {
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.25;
+      margin: 0 0 14px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .business-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 34px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+    }
+
+    .business-card h3 {
+      font-size: 28px;
+      line-height: 1.25;
+      margin: 0 0 12px;
+    }
+
+    .business-card .en {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      color: var(--accent-dark);
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .business-card p {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: #f5f0e8;
+      border: 1px solid var(--line);
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .dark-section {
+      background: var(--dark);
+      color: #fff;
+    }
+
+    .dark-section .lead,
+    .dark-section p {
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .feature-photo {
+      border-radius: 28px;
+      overflow: hidden;
+      min-height: 420px;
+      background: linear-gradient(135deg, #393939, #111);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 32px;
+      color: rgba(255,255,255,0.85);
+      font-weight: 800;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .feature-item {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+    }
+
+    .feature-item b {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 17px;
+    }
+
+    .feature-item span {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 14px;
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .work-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      aspect-ratio: 4 / 3;
+      background: #ddd;
+      border: 1px solid var(--line);
+    }
+
+    .work-placeholder {
+      height: 100%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #e7dfd1, #ffffff);
+      color: #555;
+      font-weight: 800;
+    }
+
+    .work-label {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      background: rgba(23, 23, 23, 0.86);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .recruit-box {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 44px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .recruit-box h2 {
+      margin-bottom: 12px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #fff;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-card {
+      background: var(--dark);
+      color: #fff;
+      border-radius: 34px;
+      padding: 56px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card p {
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 28px;
+    }
+
+    footer {
+      padding: 34px 0;
+      background: #fff;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 60px 0 50px;
+      }
+
+      .hero-grid,
+      .business-grid,
+      .feature-grid,
+      .recruit-box {
+        grid-template-columns: 1fr;
+      }
+
+      .works-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      section {
+        padding: 62px 0;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .hero-card-body {
+        grid-template-columns: 1fr;
+      }
+
+      .works-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .business-card,
+      .recruit-box {
+        padding: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#top" class="logo">SQUEEGEEES<span>SPACE DISPLAY / SIGN PRODUCTION</span></a>
+      <nav class="nav-links">
+        <a href="#about">ABOUT</a>
+        <a href="#business">BUSINESS</a>
+        <a href="#works">WORKS</a>
+        <a href="#recruit">RECRUIT</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">TOKORODOKORO ASOBIGOKORO</div>
+          <h1>トコロドコロ<br />遊びゴコロ。</h1>
+          <p class="hero-copy">空間ディスプレイとサイン製作を、企画・製作・施工まで。</p>
+          <p class="hero-text">
+            スキージーズ株式会社は、東京・墨田区を拠点に、展示会ブース、イベント、店舗内装などの空間ディスプレイと、グラフィック・館内サイン・店舗サインなどのサイン製作を行っています。
+          </p>
+          <div class="buttons">
+            <a class="button primary" href="mailto:info@squeegeees.jp">相談する</a>
+            <a class="button secondary" href="https://www.instagram.com/squeegeees_official/" target="_blank" rel="noopener">Instagramを見る</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-image">
+            ここにメイン写真を入れる
+            <small>展示会ブース / サイン製作 / 工房写真など</small>
+          </div>
+          <div class="hero-card-body">
+            <div class="mini-stat">
+              <b>SPACE</b>
+              <span>展示会・イベント・店舗内装</span>
+            </div>
+            <div class="mini-stat">
+              <b>SIGN</b>
+              <span>大型出力・グラフィック・サイン</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">ABOUT</div>
+          <h2>空間を、もっと面白く。</h2>
+          <p class="lead">
+            ただモノをつくるのではなく、「人がどう感じるか」「どう伝わるか」「どう記憶に残るか」を考えながら、トコロドコロに遊びゴコロを入れた空間づくりを行っています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="business">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">BUSINESS</div>
+          <h2>2つの軸で、空間をつくる。</h2>
+          <p class="lead">
+            スキージーズの事業は、空間ディスプレイとサイン製作の2軸。別々の仕事としてではなく、ひとつの空間体験としてつなげていきます。
+          </p>
+        </div>
+
+        <div class="business-grid">
+          <article class="business-card">
+            <div class="en">SPACE DISPLAY</div>
+            <h3>空間ディスプレイ事業</h3>
+            <p>
+              展示会ブース、イベント、店舗内装など、“人が体験する空間”をデザイン・施工しています。企画提案から製作・現場施工まで、一気通貫で対応します。
+            </p>
+            <div class="tags">
+              <span class="tag">展示会ブース</span>
+              <span class="tag">イベント装飾</span>
+              <span class="tag">店舗内装</span>
+              <span class="tag">什器製作</span>
+              <span class="tag">空間演出</span>
+              <span class="tag">現場施工管理</span>
+            </div>
+          </article>
+
+          <article class="business-card">
+            <div class="en">SIGN PRODUCTION</div>
+            <h3>サイン製作事業</h3>
+            <p>
+              大型出力・グラフィック・館内サイン・店舗サインなど、空間を構成するサイン製作を行っています。墨田区のオフィス兼工房にて、出力から加工まで対応します。
+            </p>
+            <div class="tags">
+              <span class="tag">大型インクジェット出力</span>
+              <span class="tag">展示会グラフィック</span>
+              <span class="tag">館内サイン</span>
+              <span class="tag">店舗サイン</span>
+              <span class="tag">パネル製作</span>
+              <span class="tag">シート加工・施工</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section">
+      <div class="container feature-grid">
+        <div class="feature-photo">
+          ここに工房・大型プリンタ・作業風景の写真を入れる
+        </div>
+        <div>
+          <div class="section-label">WORK STYLE</div>
+          <h2>オフィスの隣で、モノが生まれる。</h2>
+          <p>
+            私たちの拠点は、モノづくりの街・墨田区にあります。特徴的なのは、オフィス空間と工房が一体になっていること。
+          </p>
+          <p>
+            PCの画面上でデザインしたものが、すぐ横の大型プリンタで出力され、実際の形になっていく。そんな“手触り感”を感じながら、日々モノづくりを行っています。
+          </p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <b>現場まで見据えた提案</b>
+              <span>デザインだけで終わらず、製作・施工まで考えて進めます。</span>
+            </div>
+            <div class="feature-item">
+              <b>空間とサインをつなぐ</b>
+              <span>グラフィックやサインも、空間を構成する大事な要素として扱います。</span>
+            </div>
+            <div class="feature-item">
+              <b>小さなチームのスピード感</b>
+              <span>営業・制作・現場の距離が近く、案件全体を見ながら動けます。</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="works">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">WORKS</div>
+          <h2>展示会 / イベント / 店舗 / サイン</h2>
+          <p class="lead">
+            施工事例や製作の様子はInstagramでも発信しています。下の枠は写真に差し替えて使用してください。
+          </p>
+        </div>
+
+        <div class="works-grid">
+          <article class="work-card">
+            <div class="work-placeholder">写真1<br />展示会ブース</div>
+            <div class="work-label">EXHIBITION</div>
+          </article>
+          <article class="work-card">
+            <div class="work-placeholder">写真2<br />サイン製作</div>
+            <div class="work-label">SIGN</div>
+          </article>
+          <article class="work-card">
+            <div class="work-placeholder">写真3<br />イベント装飾</div>
+            <div class="work-label">EVENT</div>
+          </article>
+          <article class="work-card">
+            <div class="work-placeholder">写真4<br />店舗内装</div>
+            <div class="work-label">SHOP</div>
+          </article>
+          <article class="work-card">
+            <div class="work-placeholder">写真5<br />グラフィック</div>
+            <div class="work-label">GRAPHIC</div>
+          </article>
+          <article class="work-card">
+            <div class="work-placeholder">写真6<br />現場施工</div>
+            <div class="work-label">CONSTRUCTION</div>
+          </article>
+        </div>
+
+        <div style="margin-top: 30px;">
+          <a class="button secondary" href="https://www.instagram.com/squeegeees_official/" target="_blank" rel="noopener">Instagramで事例を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="recruit">
+      <div class="container">
+        <div class="recruit-box">
+          <div>
+            <div class="section-label">RECRUIT</div>
+            <h2>営業＋制作進行メンバー募集</h2>
+            <p class="lead">
+              営業だけじゃない。制作だけじゃない。クライアントとの打ち合わせから、製作進行、現場ディレクションまで、空間づくり全体に関わる仕事です。
+            </p>
+          </div>
+          <a class="button primary" href="https://www.wantedly.com/companies/company_7433669" target="_blank" rel="noopener">Wantedlyを見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="section-label">CONTACT</div>
+          <h2>展示会・イベント・店舗・サイン製作など、<br />お気軽にご相談ください。</h2>
+          <p>企画段階からのご相談も歓迎しています。</p>
+          <div class="buttons" style="justify-content: center;">
+            <a class="button primary" style="background:#fff;color:#171717;" href="mailto:info@squeegeees.jp">info@squeegeees.jp</a>
+            <a class="button secondary" style="background:transparent;color:#fff;border-color:rgba(255,255,255,0.35);" href="https://www.instagram.com/squeegeees_official/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© SQUEEGEEES Inc.</div>
+      <div>SPACE DISPLAY / SIGN PRODUCTION</div>
+    </div>
+  </footer>
+</body>
+</html>
