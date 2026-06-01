@@ -402,7 +402,12 @@
       border: 1px solid var(--line);
     }
 
-    .case-photo img { height: 100%; }
+    .case-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
     .case-photo.large {
       grid-row: span 2;
