@@ -424,22 +424,32 @@
       font-weight: 800;
     }
 
-    .sign-production-box {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 28px;
-      align-items: center;
-    }
+   .sign-production-box {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+  align-items: center;
+}
 
-    .sign-photo {
-      border-radius: 22px;
-      overflow: hidden;
-      background: linear-gradient(135deg, #e7dfd1, #ffffff);
-      aspect-ratio: 4 / 3;
-      border: 1px solid var(--line);
-    }
+.sign-photo-grid {
+  display: grid;
+  gap: 14px;
+}
 
-    .sign-photo img { height: 100%; }
+.sign-photo {
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e7dfd1, #ffffff);
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--line);
+}
+
+.sign-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
     .recruit-box {
       background: var(--paper);
@@ -772,40 +782,39 @@
           </div>
         </article>
 
-        <article class="case-card">
-          <div class="section-label">CASE 02</div>
-          <h3>サイン製作・出力</h3>
-          <div class="sign-production-box">
-            <div class="sign-photo-grid">
+     <article class="case-card">
+  <div class="section-label">CASE 02</div>
+  <h3>サイン製作・出力</h3>
 
-  <div class="sign-photo main">
-    <img src="kanban.JPG" alt="サイン製作・パネル製作">
-  </div>
-
-  <div class="sign-photo">
-    <img src="sign1.jpg" alt="">
-  </div>
-
-  <div class="sign-photo">
-    <img src="sign2.jpg" alt="">
-  </div>
-
-</div>
-              <p>
-                大型出力、パネル製作、シート加工など、空間を構成するサイン製作にも対応しています。特定の店舗サイン事例だけに限らず、工房での製作力や出力設備を活かしたサインづくりを行っています。
-              </p>
-              <div class="tags">
-                <span class="tag">大型出力</span>
-                <span class="tag">パネル製作</span>
-                <span class="tag">シート加工</span>
-                <span class="tag">展示会グラフィック</span>
-                <span class="tag">館内サイン</span>
-              </div>
-            </div>
-          </div>
-        </article>
+  <div class="sign-production-box">
+    <div>
+      <div class="sign-photo-grid">
+        <div class="sign-photo">
+          <img src="kanban.JPG" alt="店舗サイン製作">
+        </div>
+        <div class="sign-photo">
+          <img src="sign1.jpg" alt="サイン製作">
+        </div>
+        <div class="sign-photo">
+          <img src="sign2.jpg" alt="ウィンドウサイン">
+        </div>
       </div>
-    </section>
+    </div>
+
+    <div>
+      <p>
+        大型出力、パネル製作、シート加工など、空間を構成するサイン製作にも対応しています。特定の店舗サイン事例だけに限らず、工房での製作力や出力設備を活かしたサインづくりを行っています。
+      </p>
+      <div class="tags">
+        <span class="tag">大型出力</span>
+        <span class="tag">パネル製作</span>
+        <span class="tag">シート加工</span>
+        <span class="tag">展示会グラフィック</span>
+        <span class="tag">館内サイン</span>
+      </div>
+    </div>
+  </div>
+</article>
 
     <section id="recruit">
       <div class="container">
