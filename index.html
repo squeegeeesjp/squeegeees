@@ -565,6 +565,48 @@
       .company-table dt { padding-bottom: 0; border-bottom: 0; }
       .company-table dd { padding-top: 4px; }
     }
+
+    /* TOP full image */
+    .hero {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: calc(100vh - 72px);
+      min-height: 620px;
+      overflow: hidden;
+      background: #aef3bf;
+    }
+
+    .hero::before {
+      display: none;
+    }
+
+    .hero > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        height: 560px;
+        min-height: 560px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        height: 460px;
+        min-height: 460px;
+      }
+
+      .hero > img {
+        object-position: center center;
+      }
+    }
+
   </style>
 </head>
 
@@ -588,37 +630,7 @@
 
   <main id="top">
     <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">TOKORODOKORO ASOBIGOKORO</div>
-          <h1>トコロドコロ<br />アソビゴコロ。</h1>
-          <p class="hero-copy">空間ディスプレイとサイン製作を、企画・製作・施工まで。</p>
-          <p class="hero-text">
-            スキージーズ株式会社は、東京・墨田区を拠点に、展示会ブース、イベント、店舗内装などの空間ディスプレイと、グラフィック・館内サイン・店舗サインなどのサイン製作を行っています。
-          </p>
-          <div class="buttons">
-            <a class="button primary" href="mailto:info@squeegeees.jp">相談する</a>
-            <a class="button secondary" href="https://www.instagram.com/squeegeees_official/" target="_blank" rel="noopener">Instagramを見る</a>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <div class="hero-image">
-            <img src="メイン2.JPG" alt="スキージーズのメインビジュアル">
-            <small>展示会ブース / サイン製作 / 工房</small>
-          </div>
-          <div class="hero-card-body">
-            <div class="mini-stat">
-              <b>SPACE</b>
-              <span>展示会・イベント・店舗内装</span>
-            </div>
-            <div class="mini-stat">
-              <b>SIGN</b>
-              <span>大型出力・グラフィック・サイン</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <img src="TOP.png" alt="トコロドコロ アソビゴコロ">
     </section>
 
     <section id="about">
