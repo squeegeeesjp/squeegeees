@@ -29,6 +29,8 @@
       background: var(--bg);
       line-height: 1.8;
       letter-spacing: 0.03em;
+      word-break: keep-all;
+      overflow-wrap: break-word;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -55,6 +57,14 @@
       font-weight: 800;
       font-size: 15px;
       letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
     }
 
     .back-link {
@@ -149,11 +159,12 @@
     }
 
     .axis-card .num {
-      font-size: 12px;
+      font-size: 20px;
       font-weight: 900;
       color: var(--accent-dark);
       margin-bottom: 10px;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
     }
 
     .axis-card .step {
@@ -191,12 +202,12 @@
     }
 
     .secret-callout .section-label { color: var(--accent); }
-    .secret-callout p { color: rgba(255,255,255,0.78); max-width: 600px; margin: 0 auto; }
+    .secret-callout p { color: rgba(255,255,255,0.78); max-width: 600px; margin: 0 auto; line-break: strict; word-break: keep-all; overflow-wrap: break-word; }
     .secret-callout h3 { font-size: 20px; margin: 10px 0 16px; }
 
     .flow-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
       margin-top: 36px;
     }
@@ -224,13 +235,14 @@
     }
 
     .flow-card h4 {
-      font-size: 16px;
-      margin: 0 0 10px;
+      font-size: 18px;
+      margin: 0 0 12px;
     }
 
     .flow-card p {
-      color: var(--muted);
-      font-size: 14px;
+      color: var(--ink);
+      opacity: 0.75;
+      font-size: 15px;
       margin: 0;
     }
 
@@ -243,18 +255,19 @@
     }
 
     .send-items h4 {
-      font-size: 15px;
-      margin: 0 0 16px;
+      font-size: 18px;
+      margin: 0 0 18px;
     }
 
     .send-items ul {
       margin: 0;
-      padding-left: 20px;
-      color: var(--muted);
-      font-size: 14px;
+      padding-left: 22px;
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.9;
     }
 
-    .send-items li { margin-bottom: 8px; }
+    .send-items li { margin-bottom: 10px; }
 
     .contact-section {
       background: var(--paper);
@@ -349,7 +362,7 @@
 <body>
   <header>
     <div class="container nav">
-      <a href="index.html" class="logo">SQUEEGEEES</a>
+      <a href="index.html" class="logo"><img src="logo2.png" alt="SQUEEGEEES"></a>
       <a href="index.html" class="back-link">← TOPに戻る</a>
     </div>
   </header>
@@ -416,7 +429,8 @@
           <div class="section-label">SECRET</div>
           <h3>どれが一番重要か、ここでは言いません。</h3>
           <p>
-            7つの軸は、互いに独立していません。1つが弱いと、他の6つがどれだけ頑張っても効果が出ない——
+            7つの軸は、互いに独立していません。<br>
+            1つが弱いと、他の6つがどれだけ頑張っても効果が出ない——<br>
             そういう関係になっています。どれが鍵かは、診断の中でお伝えします。
           </p>
         </div>
@@ -427,28 +441,33 @@
       <div class="container">
         <div class="section-label">HOW IT WORKS</div>
         <h2>診断の流れ</h2>
-        <p class="lead">図面・コマ位置・写真を送っていただくだけ。難しい準備は必要ありません。</p>
+        <p class="lead">まずはフォームからお申し込みください。図面や写真は、その後のメールでお送りいただきます。</p>
 
         <div class="flow-grid">
           <div class="flow-card">
             <div class="flow-num">1</div>
-            <h4>送っていただく</h4>
-            <p>下のフォームから、ブースの図面・コマ位置・当日や過去の写真をお送りください。</p>
+            <h4>フォームで申し込む</h4>
+            <p>下のフォームに、会社名とご連絡先を入力して送信してください。</p>
           </div>
           <div class="flow-card">
             <div class="flow-num">2</div>
+            <h4>図面・写真を送る</h4>
+            <p>折り返しのメールに、ブースの図面・コマ位置・写真を添付してご返信ください。</p>
+          </div>
+          <div class="flow-card">
+            <div class="flow-num">3</div>
             <h4>7軸でチェック</h4>
             <p>業界目線・一般来場者目線の2軸で、7つのポイントを照らし合わせます。</p>
           </div>
           <div class="flow-card">
-            <div class="flow-num">3</div>
+            <div class="flow-num">4</div>
             <h4>結果をお伝え</h4>
             <p>どこで来場者の足が止まっていないか、改善の方向性を無料でお伝えします。</p>
           </div>
         </div>
 
         <div class="send-items">
-          <h4>送っていただきたいもの（あるものだけで大丈夫です）</h4>
+          <h4>折り返しのメールで送っていただきたいもの（あるものだけで大丈夫です）</h4>
           <ul>
             <li>ブースの図面・レイアウト（手書き・データ問わず）</li>
             <li>小間位置・小間番号がわかるもの（会場図の該当箇所など）</li>
