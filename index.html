@@ -358,6 +358,71 @@
       align-items: center;
     }
 
+    #diagnosis { padding: 0 0 42px; }
+
+    .diagnosis-box {
+      background: var(--dark);
+      color: #fff;
+      border-radius: 30px;
+      padding: 44px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .diagnosis-box::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: rgba(243,177,63,0.16);
+      right: -110px;
+      top: -110px;
+    }
+
+    .diagnosis-box .section-label {
+      color: var(--accent);
+      position: relative;
+      z-index: 1;
+    }
+
+    .diagnosis-box h2 {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 12px;
+    }
+
+    .diagnosis-box .lead {
+      color: rgba(255,255,255,0.74);
+      position: relative;
+      z-index: 1;
+      font-weight: 700;
+    }
+
+    .diagnosis-cta {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .diagnosis-box .button.primary {
+      background: var(--accent);
+      color: var(--ink);
+    }
+
+    .diagnosis-axis-preview {
+      margin-top: 12px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.04em;
+      max-width: 220px;
+    }
+
     .company-contact-wrap { padding: 0 0 82px; }
 
     .company-contact-grid {
@@ -445,7 +510,8 @@
       .recruit-box,
       .company-contact-grid,
       .works-showcase,
-      .info-card {
+      .info-card,
+      .diagnosis-box {
         grid-template-columns: 1fr;
       }
 
@@ -685,6 +751,25 @@
             </p>
           </div>
           <a class="button primary" href="https://www.wantedly.com/companies/company_7433669" target="_blank" rel="noopener">Wantedlyを見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="diagnosis">
+      <div class="container">
+        <div class="diagnosis-box">
+          <div>
+            <div class="section-label">無料診断</div>
+            <h2>そのブース、何人の足を止められましたか？</h2>
+            <p class="lead">
+              名刺交換の数が、毎回なんとなく安定しない。「悪くはなかった」で終わる展示会が続いている。<br>
+              ——それ、ブースの設計に理由があるかもしれません。図面・コマ位置・写真を送るだけで、7つの視点から無料でチェックします。
+            </p>
+          </div>
+          <div class="diagnosis-cta">
+            <a class="button primary" href="shindan.html">無料でブースを診断する</a>
+            <div class="diagnosis-axis-preview">気づく・入る・足を止める・話しかける・接点を残す・記憶に残す・絞って選ばせる</div>
+          </div>
         </div>
       </div>
     </section>
