@@ -47,7 +47,7 @@
     }
 
     .nav {
-      height: 84px;
+      height: 100px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -62,7 +62,7 @@
     }
 
     .logo img {
-      height: 48px;
+      height: 72px;
       width: auto;
       object-fit: contain;
     }
@@ -346,181 +346,4 @@
     }
 
     @media (max-width: 860px) {
-      .axis-grid { grid-template-columns: repeat(2, 1fr); }
-      .flow-grid { grid-template-columns: 1fr; }
-      section { padding: 50px 0; }
-    }
-
-    @media (max-width: 560px) {
-      .container { width: min(100% - 28px, 1120px); }
-      .axis-grid { grid-template-columns: 1fr 1fr; }
-      .contact-card { padding: 36px 22px; }
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <div class="container nav">
-      <a href="index.html" class="logo"><img src="logo2.png" alt="SQUEEGEEES"></a>
-      <a href="index.html" class="back-link">← TOPに戻る</a>
-    </div>
-  </header>
-
-  <main>
-    <section class="diag-hero">
-      <div class="container">
-        <span class="badge">無料診断</span>
-        <h1>そのブース、<br class="sp-only">何人の足を止められましたか？</h1>
-        <p class="question">
-          名刺交換の数が、毎回なんとなく安定しない。<br>
-          「悪くはなかった」で終わる展示会が続いている。<br>
-          ——それ、ブースの設計に理由があるかもしれません。
-        </p>
-        <a class="button primary" href="#contact">無料で診断してもらう</a>
-      </div>
-    </section>
-
-    <section class="axis-section">
-      <div class="container">
-        <div class="section-label">7 AXIS CHECK</div>
-        <h2>展示会ブースを、7つの視点でチェックします。</h2>
-        <p class="lead">
-          業界歴30年・施工400件以上のスキージーズが、来場者の動きを軸に分解。<br>
-          自社ブースが「どこで人を逃しているか」が見えてきます。
-        </p>
-
-        <div class="axis-grid">
-          <div class="axis-card">
-            <div class="num">01 — 気づく</div>
-            <div class="step">視認性</div>
-          </div>
-          <div class="axis-card">
-            <div class="num">02 — 入る</div>
-            <div class="step">入りやすさ</div>
-          </div>
-          <div class="axis-card">
-            <div class="num">03 — 足を止める</div>
-            <div class="step">引き込み力</div>
-          </div>
-          <div class="axis-card">
-            <div class="num">04 — 話しかける</div>
-            <div class="step">声かけのきっかけ</div>
-          </div>
-          <div class="axis-card">
-            <div class="num">05 — 接点を残す</div>
-            <div class="step">記録に残る接点</div>
-          </div>
-          <div class="axis-card">
-            <div class="num">06 — 記憶に残す</div>
-            <div class="step">印象の独自性</div>
-          </div>
-          <div class="axis-card">
-            <div class="num">07 — 絞って選ばせる</div>
-            <div class="step">伝える情報の絞り込み</div>
-          </div>
-          <div class="axis-card secret">
-            <div class="num">？？？</div>
-            <div class="step">実はこの7つのうち、<br>1つが残り6つを<br>左右しています。</div>
-          </div>
-        </div>
-
-        <div class="secret-callout">
-          <div class="section-label">SECRET</div>
-          <h3>どれが一番重要か、ここでは言いません。</h3>
-          <p>
-            7つの軸は、互いに独立していません。<br>
-            1つが弱いと、他の6つがどれだけ頑張っても効果が出ない——<br>
-            そういう関係になっています。どれが鍵かは、診断の中でお伝えします。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-label">HOW IT WORKS</div>
-        <h2>診断の流れ</h2>
-        <p class="lead">まずはフォームからお申し込みください。図面や写真は、その後のメールでお送りいただきます。</p>
-
-        <div class="flow-grid">
-          <div class="flow-card">
-            <div class="flow-num">1</div>
-            <h4>フォームで申し込む</h4>
-            <p>下のフォームに、会社名とご連絡先を入力して送信してください。</p>
-          </div>
-          <div class="flow-card">
-            <div class="flow-num">2</div>
-            <h4>図面・写真を送る</h4>
-            <p>折り返しのメールに、ブースの図面・コマ位置・写真を添付してご返信ください。</p>
-          </div>
-          <div class="flow-card">
-            <div class="flow-num">3</div>
-            <h4>7軸でチェック</h4>
-            <p>業界目線・一般来場者目線の2軸で、7つのポイントを照らし合わせます。</p>
-          </div>
-          <div class="flow-card">
-            <div class="flow-num">4</div>
-            <h4>結果をお伝え</h4>
-            <p>どこで来場者の足が止まっていないか、改善の方向性を無料でお伝えします。</p>
-          </div>
-        </div>
-
-        <div class="send-items">
-          <h4>折り返しのメールで送っていただきたいもの（あるものだけで大丈夫です）</h4>
-          <ul>
-            <li>ブースの図面・レイアウト（手書き・データ問わず）</li>
-            <li>小間位置・小間番号がわかるもの（会場図の該当箇所など）</li>
-            <li>過去の出展写真、または完成イメージ・パース</li>
-            <li>出展する展示会名・業種・主な来場者層</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-section" id="contact">
-      <div class="container">
-        <div class="contact-card">
-          <div class="section-label">CONTACT</div>
-          <h2 style="color:#fff;">無料診断を申し込む</h2>
-          <p>図面や写真は、メール本文に添付・返信する形でも問題ありません。まずは下記からお気軽にどうぞ。</p>
-
-          <form class="form-grid" action="mailto:info@squeegeees.jp" method="post" enctype="text/plain">
-            <div class="form-row">
-              <label for="company">会社名</label>
-              <input type="text" id="company" name="会社名" placeholder="株式会社〇〇" required>
-            </div>
-            <div class="form-row">
-              <label for="name">ご担当者名</label>
-              <input type="text" id="name" name="ご担当者名" placeholder="山田 太郎" required>
-            </div>
-            <div class="form-row">
-              <label for="email">メールアドレス</label>
-              <input type="email" id="email" name="メールアドレス" placeholder="example@company.co.jp" required>
-            </div>
-            <div class="form-row">
-              <label for="exhibition">出展予定の展示会名（わかる範囲で）</label>
-              <input type="text" id="exhibition" name="出展予定の展示会名" placeholder="例：〇〇展示会 2026">
-            </div>
-            <div class="form-row">
-              <label for="message">図面・コマ位置・写真について、または質問など</label>
-              <textarea id="message" name="メッセージ" placeholder="図面は後ほどメールで送付します、など"></textarea>
-            </div>
-            <div class="form-submit">
-              <button type="submit" class="button primary" style="background:#fff;color:#171717;border:none;cursor:pointer;">この内容で送信する</button>
-            </div>
-            <p class="form-note">送信すると、お使いのメールソフトが起動します。内容を確認のうえ送信してください。</p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <div>© SQUEEGEEES Inc.</div>
-      <div><a href="index.html">TOPへ戻る</a></div>
-    </div>
-  </footer>
-</body>
-</html>
+      .axis-grid { grid-template-columns:
